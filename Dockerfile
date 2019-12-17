@@ -3,7 +3,6 @@ FROM python:alpine
 RUN mkdir -p /var/db/electrumx && \
     apk add --no-cache git build-base openssl && \
     apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/main leveldb-dev && \
-    apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing rocksdb-dev && \
     git clone --recursive https://github.com/MFrcoin/electrumx.git && \
     cd electrumx && \
     rm -rf .git && \
